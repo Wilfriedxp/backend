@@ -1,0 +1,37 @@
+# ─────────────────────────────────────────────────────────────────
+#  WebMine BI — Backend Python Dependencies
+#  Install: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────
+
+# Web framework
+fastapi>=0.100.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# Data validation
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+email-validator>=2.1.0
+
+# Authentication  ← NEW
+python-jose[cryptography]>=3.3.0   # JWT tokens
+bcrypt==4.0.1                       # password hashing (pinned for passlib compat)
+passlib[bcrypt]>=1.7.4              # password hashing context
+
+# Data processing & ML
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# Database
+sqlalchemy>=2.0.0
+psycopg[binary]
+alembic>=1.12.0
+
+# Testing
+pytest>=7.4.0
+httpx>=0.25.0
+
+# Utilities
+openpyxl>=3.1.0
