@@ -58,9 +58,8 @@ class Settings(BaseSettings):
 
     # ── Upload ───────────────────────────────────────────────────────────────
     MAX_UPLOAD_MB: int = 50
-
-RESEND_API_KEY: str
-EMAIL_FROM: str = "onboarding@resend.dev"
+    RESEND_API_KEY: str
+    EMAIL_FROM: str = "onboarding@resend.dev"
 
     def env_file_location(self) -> str:
         """Return the absolute path where .env is expected — useful for diagnostics."""
