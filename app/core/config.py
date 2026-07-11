@@ -59,24 +59,8 @@ class Settings(BaseSettings):
     # ── Upload ───────────────────────────────────────────────────────────────
     MAX_UPLOAD_MB: int = 50
 
-    # ── SMTP Email ───────────────────────────────────────────────────────────
-    # These MUST be set in backend/.env — defaults are empty on purpose
-    # so the diagnostic endpoint can tell you what is missing.
-    #
-    # Gmail setup:
-    #   SMTP_HOST     = smtp.gmail.com
-    #   SMTP_PORT     = 587
-    #   SMTP_USER     = your-address@gmail.com   ← who SENDS the email
-    #   SMTP_PASSWORD = 16-char-app-password     ← NOT your Gmail login password
-    #   EMAIL_FROM    = WebMine BI               ← display name in From field
-    #
-    # The RECIPIENT (to_email) is the logged-in user's email from the database,
-    # NOT from this file.
-    SMTP_HOST:     str = ""
-    SMTP_PORT:     int = 587
-    SMTP_USER:     str = ""
-    SMTP_PASSWORD: str = ""
-    EMAIL_FROM:    str = "WebMine BI"
+RESEND_API_KEY: str
+EMAIL_FROM: str = "onboarding@resend.dev"
 
     def env_file_location(self) -> str:
         """Return the absolute path where .env is expected — useful for diagnostics."""
